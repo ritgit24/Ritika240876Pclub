@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Space</title>
+<link href="C:\Users\Ritika Batra\OneDrive\Desktop\my files\spaceeCss.css" rel="stylesheet"/>
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVcl1UQmcy4YC9GnDfErzFt5bWKrGwxJ4-mg&s" type="image/x-icon" />
+<style>
+#example1 {
+  background-image:  url(https://img.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_23-2148968733.jpg?semt=ais_hybrid);
+  background-repeat: no-repeat;
+background-size: cover;
+  padding: 15px;
+height:300px;
+margin-bottom:100px;
+}
+#example2 {
+  background-image:  url(https://img.freepik.com/premium-photo/interstellar-travel-with-spacecraft-hyperdriv-00657-03_883586-39630.jpg);
+  background-repeat: no-repeat;
+background-size: cover;
+  padding: 15px;
+height:200px;
+margin-bottom:20px;
+}
+#example3 {
+   animation :  slide-in 5s infinite ;
+}
+keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+.ghy
+{
+font-family:Courier New;
+}
+.ghy:hover {
+    font-size: 18px;
+}
+.apt
+{
+width:485px;height:151px; background-color:Gray;opacity:0.7; padding: 10px; float:right; margin-right: 50px ;margin-bottom:40px;box-shadow: 5px 5px 5px white;color:white;
+
+}
+.apt:hover
+{
+background-color:LightCoral;opacity:1;box-shadow: 8px 8px 5px white; border-radius:10px;color:black;
+}
+.apb
+{
+width:485px;height:151px; margin-left:50px; background-color:Gray;opacity:0.7; padding-right: 40px;padding-left: 10px;padding-bottom: 10px;padding-top: 10px;margin-bottom:40px;box-shadow: 5px 5px 5px white;color:white;
+}
+.apb:hover
+{
+background-color:LightCoral;opacity:1;box-shadow: 8px 8px 5px white; border-radius:10px;color:black;
+}
+.sde
+{
+background-color:LightCoral;opacity:0.7;height:100px;margin-top:30px;border:6px solid black;padding:20px;margin-left:5px;
+}
+.sde:hover
+{
+background-color:LightCoral;opacity:1;box-shadow: 8px 8px 5px white; border-radius:10px;
+}
+
+.column1 
+{
+  
+  width: 20%;
+  
+   height : 2600px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: right;
+  width: 80%;
+  
+   height : 2600px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.abc
+{
+width:302px;border:2px solid black;
+}
+.abc:hover
+{
+background-color:Coral;
+}
+.popup
+{
+background-image: linear-gradient(black, pink);
+
+width:400px;
+height:533px;
+top:0;
+left:50%;
+transform:translate(-50%,-50%) scale(0.1);
+text-align:center;
+border-radius:10px;
+color:white;
+padding-top:20px;
+transition : transform 0.4s ,top 0.4s;
+visibility:hidden;
+border:5px solid white;
+}
+
+.open-popup
+{
+top:50%;
+visibility : visible;
+transform:translate(-50%,-50%) scale(1);
+}
+.remove-popup
+{
+top:0;
+left:50%;
+transform:translate(-50%,-50%) scale(0.001);
+transition : transform 0.4s ,top 0.4s;
+}
+
+
+</style>
+</head>
+<body style="margin:0;">
+
+<div style="background-color:black;padding-top:5px;padding-left:20px;padding-bottom:5px;margin-bottom:0px;box-shadow: 5px 5px 5px white;">
+
+<div>
+<button style = "background-color:black;color:LightCoral;font-family: Goudy Old Style;width:150px;height : 50px;cursor: pointer;margin-right:30px;box-shadow: 5px 5px 5px white;float:right;border-radius:20px;margin-top:40px;" onclick="batra()">LOG IN</button>
+<div class="popup" id="popup">
+<section >
+    <form action="spaceC.php" method="post" >
+        <label for="firstname"><b>Firstname :</b></label>
+        <br>
+        <input type="text" id="firstname" name="FirstNameUser" placeholder="FirstName" value="Ritika">
+        <br><br>
+        <label for="Lastname"><b>Lastname :</b></label>
+        <br>
+        <input type="text" id="Lastname" name="LastNameUser" placeholder="FirstName" value="Batra">
+        <br><br>
+        <label for="email"><b>Gmail :</b></label>
+        <br>
+        <input type="email" id="email" name="GmailUser" placeholder="xxx@gmail.com" value="xxx@gmail.com">
+        <br><br>
+        <label for="username"><b>Your username :</b></label>
+        <br>
+        <input type="text" id="username" name="UserName" placeholder="astroMe" value="astroMe">
+        <br><br>
+        <label>Choose your interests for us to update you!<label>
+        <br>
+        <input type="radio" id="EyeColor1" name="Interest1" >
+        <label for="EyeColor1">Cosmology</label>
+        <br>
+        
+        <input type="radio" id="EyeColor2" name="Interest2" >
+        <label for="EyeColor2">Black holes</label>
+        <br>
+        
+        <input type="radio" id="EyeColor3" name="Interest3" >
+        <label for="EyeColor3">Aliens</label>
+<br><br>
+
+       <!-- <button type="submit" value="SubmitYo">Submit your data</button> -->
+    </form>
+
+</section>
+<br>
+<button type="button" onclick="ji()" >ok</button>
+</div>
+</div>
+<script>
+var popup = document.getElementById("popup");
+
+function batra()
+{
+document.getElementById("popup").classList.add("open-popup");
+console.log("done babu ji");
+}
+function ji()
+{
+popup.classList.add("remove-popup");
+}
+</script>
+
+<a href="" >
+<button style = "background-color:black;
+color:LightCoral;
+font-family: Goudy Old Style;
+width:150px;
+height : 50px;
+cursor: pointer;
+margin-right:30px;
+box-shadow: 5px 5px 5px white;float:right;border-radius:20px;margin-top:40px;margin-left:30px;" ><abbr title="Track what you learn with an account" style="text-decoration:none;">SIGN UP</abbr></button>
+</a>
+<p style="color:white;font-size:40px;font-family:Courier New;float:right;">Ready for a space odyssey..?! </p>
+<p style="display:inline-block;color:white;font-size:40px;font-family:Courier New">
+  <img src="C:\Users\Ritika Batra\OneDrive\Desktop\spaceeiconNew2.jpg" >
+  SPACE.edu
+</p>
+</div>
+
+<div class="row" >
+<div class="column2">
+<div style="width:500px; margin:auto; color:black;  background-color : LightCoral; padding :20px;border-radius:30px 0px;margin-bottom:70px;box-shadow: 5px 5px 5px white;margin-top:80px;
+">
+             <p class="ghy">Whether its astrobiology,astrophysics,cosmology,black holes or nebulas, we have you covered.</p>
+</div>
+<a href="https://en.wikipedia.org/wiki/Astrophysics#:~:text=Astrophysics%20is%20a%20science%20that,of%20astronomical%20objects%20and%20phenomena." >
+<button style = "background-color:black;
+color:LightCoral;
+font-family: Goudy Old Style; 
+width:150px;
+height : 50px;
+cursor: pointer;
+margin-right:30px ;
+margin-left:80px ; box-shadow: 5px 5px 5px white;
+" 
+class="ghy">ASTROPHYSICS</button>  <!--30 px is wrong-->
+</a>
+<a href="https://en.wikipedia.org/wiki/Astrobiology" >
+<button style = "background-color:black;
+color:LightCoral;
+font-family: Goudy Old Style;
+width:150px;
+height : 50px;
+cursor: pointer;
+margin-right:30px;box-shadow: 5px 5px 5px white;
+" 
+class="ghy">ASTROBIOLOGY</button>
+</a>
+<a href="https://en.wikipedia.org/wiki/Cosmology" >
+<button style = "background-color:black;
+color:LightCoral;
+font-family: Goudy Old Style;
+width:150px;
+height : 50px;
+cursor: pointer;
+margin-right:30px;
+margin-bottom:30px;box-shadow: 5px 5px 5px white;
+"
+class="ghy" >COSMOLOGY</button>
+</a>
+<a href="https://en.wikipedia.org/wiki/Nebula" >
+<button style = "background-color:black;
+color:LightCoral;
+font-family: Goudy Old Style;
+width:150px;
+height : 50px;
+cursor: pointer;
+margin-right:30px;
+margin-bottom:30px;box-shadow: 5px 5px 5px white;
+" 
+class="ghy">NEBULAS</button>
+</a>
+<a href="https://science.nasa.gov/universe/black-holes/" >
+<button style = "background-color:black;
+color:LightCoral;
+font-family: Goudy Old Style;
+width:150px;
+height : 50px;
+cursor: pointer;
+margin-right:30px;
+margin-bottom:30px;box-shadow: 5px 5px 5px white;
+" class="ghy">BLACK HOLES</button>
+</a>
+<a href="https://www.ox.ac.uk/news/2017-10-31-aliens-may-be-more-us-we-think" >
+<button style = "background-color:black;
+color:LightCoral;
+font-family: Goudy Old Style;
+width:150px;
+height : 50px;
+cursor: pointer;
+margin-right:30px;
+margin-bottom:30px;box-shadow: 5px 5px 5px white;
+" class="ghy">ALIENS</button>
+</a>
+<br>
+<div style="width:500px; margin:auto; color:black;  background-color : LightCoral; padding :20px;border-radius:30px 0px;margin-top:50px;box-shadow: 5px 5px 5px white;
+">
+             <p class="ghy">Ever imagined how fast the earth moves round the sun,or the sun moves round the solar sytem or wait...there's so much more !</p>
+</div>
+<div style="background-color:LightCorol;">
+<button style = "background-color:black;
+color:LightCoral;
+font-family: Goudy Old Style;
+width:500px;
+height : 90px;
+cursor: pointer;
+box-shadow: 5px 5px 5px white;border-radius:20px;margin-top:40px;margin-left:340px;" onclick="MyApi()" ><p style="font-family:Goudy Old Style;">Want to know today's Astronomy Fact as uploaded by NASA's APOD Website?</p><p style="font-family:Goudy Old Style;">Credits : NASA APOD API</button>
+<p id="demo" style="color:white;margin-left:30px;font-family:Goudy Old Style;"></p>
+</div>
+
+<script>
+const URL="https://api.nasa.gov/planetary/apod?api_key=RVnIAvPuxF862FqAen6dnBSWhCthXIdaMohRowzF";
+async function MyApi()
+{
+const result = await fetch (URL)
+result.json().then(data => {
+const temp= data.explanation;
+console.log(`It's ${temp}F in London`)
+document.getElementById("demo").innerHTML=temp;
+})
+}
+</script>
+<div style="width:450px; margin:auto; color:black;  background-color : LightCoral; padding-left :120px;border-radius:30px 0px;margin-top:60px;margin-bottom:30px;">
+<h2 style:"text-align:center;">Dive into Latest discoveries below</h2>
+</div>
+<div class="apt" >
+<p style="float:right;">Recent clicks by the hubble space telescope</p>
+<a href="https://esahubble.org/images/" title="Explore!">
+<img src="https://cdn.esahubble.org/archives/images/thumb300y/heic1509a.jpg" width=160 height=150 /img>
+</a>
+</div>
+<div class="apb" >
+<p style="float:right;margin-right=80px;">Look into enchanting insights given by JWST</p>
+<a href="https://webbtelescope.org/news/first-images/gallery" title="Explore!">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7oSJsyUY40f7c7dn_xwBAHIKujaFd9U86EA&s" width=160 height=150 /img>
+</a>
+</div>
+<div class="apt" >
+<p style="float:right;">Know more about Andromeda,our neighbour</p>
+<a href="https://en.wikipedia.org/wiki/Cosmos" title="Explore!">
+<img src="https://cdn.britannica.com/89/5589-004-498C1764/M31-Andromeda-Galaxy.jpg" width=160 height=150 /img>
+</a>
+</div>
+<div class="apb" >
+<p style="float:right;margin-right=50px;">The deep black Sagittarius A awaits you!</p>
+<a href="https://en.wikipedia.org/wiki/Sagittarius_A*" title="Explore!">
+<img src="https://cdn.eso.org/images/large/eso2406a.jpg" width=160 height=150 /img>
+</a>
+</div>
+<div class="apt">
+<p style="float:right;margin-right:50px;">History of Space Expiditions</p>
+<a href="https://www.nasa.gov/missions/" title="Explore!">
+<img src="https://img1.wsimg.com/isteam/ip/e32736e4-8761-4754-9263-9b48932c2510/shutterstock_208039768.jpg" width=160 height=150 /img>
+</a>
+</div>
+<div class="apb" >
+<p style="float:right;margin-right=40px;">Are humans really the only ones out there?</p>
+<a href="https://en.wikipedia.org/wiki/Extraterrestrial_life" title="Explore!">
+<img src="https://plus.unsplash.com/premium_photo-1714618882514-ee0d1e6da402?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWxpZW58ZW58MHx8MHx8fDA%3D" width=160 height=150 /img>
+</a>
+</div>
+<div id="example2">
+  <h1 style="color:white;text-align:center;">Why intersteller travel matters?</h1>
+<p style="color:white;text-align:center;">We sincerely promote interstellar travel</p>
+</div>
+<div id="example1">
+  <h1 style="color:black;">Ever wondered what caused the big bang?</h1>
+  <p id="example3">The universe began, scientists believe, with every speck of its energy jammed into a very tiny point. This extremely dense point exploded with unimaginable force, creating matter and propelling it outward to make the billions of galaxies of our vast universe.</p>
+<p id="example3">The Big Bang Theory is the leading explanation for how the universe began. Simply put, it says the universe as we know it started with an infinitely hot and dense single point that inflated and stretched — first at unimaginable speeds, and then at a more measurable rate — over the next 13.7 billion years to the still-expanding cosmos that we know today.</p>
+<p id="example3">Existing technology doesn't yet allow astronomers to literally peer back at the universe's birth, much of what we understand about the Big Bang comes from mathematical formulas and models. Astronomers can, however, see the "echo" of the expansion through a phenomenon known as the cosmic microwave background.</p>
+<p id="example3">While the majority of the astronomical community accepts the theory, there are some theorists who have alternative explanations besides the Big Bang — such as eternal inflation or an oscillating universe.</p>
+</div>
+
+
+
+
+
+<div class="sde">
+<h1 style="text-align:center;"><a href="file:///C:/Users/Ritika%20Batra/OneDrive/Desktop/my%20files/About%20Us.html" style="color : white ;text-decoration:none;">About me</a></h1>
+</div>
+<div style="width:500px;background-color:LightCoral;margin-left:370px;padding-top:10px;padding-bottom:10px;margin-top:40px;border-radius:10px;">
+<p style="color:black;font-family:Courier New;text-align: center;">DID YOU LIKE OUR WEBSITE?</P>
+<button style="float:right;margin-right:200px;background-color:black;color:LightCoral;font-family: Goudy Old Style;cursor: pointer;box-shadow: 5px 5px 5px white;border-radius:10px;" type="button" onclick="nana()" >NO</button>
+<button type="button" style="margin-left:200px;background-color:black;color:LightCoral;font-family: Goudy Old Style;cursor: pointer;box-shadow: 5px 5px 5px white;border-radius:10px;" onclick="lala()">YES</button>
+<p id="new1" style="font-family:Courier New;color:white;text-align:center;"></p>
+<script>
+var yes = 0;
+var total = 0;
+var no=0;
+function lala()
+{
+
+yes=yes+1;
+total=total+1;
+let z = (yes / total)*100;
+document.getElementById("new1").innerHTML = z + "% people voted yes :)";
+}
+function nana()
+{
+no=no+1;
+total=total+1;
+let z = (no / total)*100;
+document.getElementById("new1").innerHTML = z + "% people voted no :(";
+
+}
+</script>
+</div>
+
+
+</div>
+<div class="column1" style="background-color:LightCoral ;">
+<div class="abc" >
+<p style="text-align:center;font-family:Courier New;">How telescopes work? </p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">What's with the expanding universe? </p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Fate of the universe</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Travelling to mars</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Wormholes-A Short Cut</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Artemis  mission</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Future of Space Travel</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Gas Giants of our Solar System</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How alone are we?</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Singularity</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How huge is the sun?</p>
+</div>
+<div class="abc" >
+<p style="text-align:center;font-family:Courier New;">How telescopes work? </p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">What's with the expanding universe? </p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Fate of the universe</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Travelling to mars</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Wormholes-A Short Cut</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Artemis  mission</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Future of Space Travel</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Gas Giants of our Solar System</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How alone are we?</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Singularity</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How huge is the sun?</p>
+</div>
+<div class="abc" >
+<p style="text-align:center;font-family:Courier New;">How telescopes work? </p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">What's with the expanding universe? </p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Fate of the universe</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Travelling to mars</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Wormholes-A Short Cut</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Artemis  mission</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Future of Space Travel</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Gas Giants of our Solar System</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How alone are we?</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Singularity</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How huge is the sun?</p>
+</div>
+<div class="abc" >
+<p style="text-align:center;font-family:Courier New;">How telescopes work? </p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">What's with the expanding universe? </p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Fate of the universe</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Travelling to mars</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Wormholes-A Short Cut</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Artemis  mission</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Future of Space Travel</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Gas Giants of our Solar System</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How alone are we?</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">Singularity</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How huge is the sun?</p>
+</div>
+<div class="abc">
+<p style="text-align:center;font-family:Courier New;">How huge is the sun?</p>
+</div>
+<div class="abc" >
+<p style="text-align:center;font-family:Courier New;">How telescopes work? </p>
+</div>
+<div class="abc" >
+<p style="text-align:center;font-family:Courier New;">Read more !  </p>
+</div>
+
+</div>
+ </div> 
+</body>
+    </html> 
