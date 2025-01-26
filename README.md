@@ -1,10 +1,12 @@
 # Ritika240876Pclub
 For tasks of Pclub/Spring Camp
-TASK-1
+TASK-1 . 
+My code is in the file named SpacePClub.html .  
 I have uploaded my code for task - 1 wherein I have tried to create an interactive and catchy User Interface in my webpage named Space.edu  .
-I have used HTML,CSS,JS
+I have used HTML,CSS,JS.
 API USED : NASA APOD API https://api.nasa.gov/planetary/apod?api_key=RVnIAvPuxF862FqAen6dnBSWhCthXIdaMohRowzF
 Key features of my webpage : 
+I have a favicon for both of my webpages which are interlinked.
 Going from top to bottom of the page, I first have a login button wherein I allow my users to enter in their required data in a popup which I would later store in a server.
 Each of the buttons next to this leads to a respective domain.
 Then I allow the users to read an astronomy fact of that particular date using the API Mentioned above
